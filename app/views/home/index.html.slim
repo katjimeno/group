@@ -5,7 +5,15 @@ div.wrapper-content
   .aligned-containers.landing-form
     div.form-container
       h1 It's Easy!
-
+      
+      div.row 
+        div.column.half
+          button class="btn btn-primary" id="Login" Login
+        div.column.half
+          button class="btn btn-primary" id="Register" Register
+        /= link_to "login", new_user_session_path, method: :get, id: "Login", remote: true, class: "btn btn-primary"
+        /= link_to "register", new_user_registration_path, method: :get, id: "Register", remote: true, class: "btn btn-primary"
+        
       div#login-form
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
           .field
@@ -46,10 +54,6 @@ div.wrapper-content
 
       = render "devise/shared/links"
 
-      button class="btn btn-primary" id="Login"
-      button class="btn btn-primary" id="Register"
-      /= link_to "login", new_user_session_path, method: :get, id: "Login", remote: true, class: "btn btn-primary"
-      /= link_to "register", new_user_registration_path, method: :get, id: "Register", remote: true, class: "btn btn-primary"
 
       
   .aligned-containers.quote-box
