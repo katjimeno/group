@@ -24,10 +24,10 @@ Rails.application.routes.draw do
     resource :groups, only: [:show, :edit, :delete, :update]
 
     scope :weeks do
-      put '/:id', to: "weeks#update", as: 'update_week'
+      put '/:id', to: 'weeks#update', as: 'update_week'
     end
 
   end
 
-  root "home#index"
+  root 'home#index'
 end
