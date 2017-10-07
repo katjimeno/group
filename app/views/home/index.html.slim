@@ -44,9 +44,7 @@ div.wrapper-content
           .actions
             = f.submit "Sign up"
 
-      div before
       = render "devise/shared/links"
-      div after
 
       = link_to "login", new_user_session_path, method: :get, id: "Login", remote: true, class: "btn btn-primary"
       = link_to "register", new_user_registration_path, method: :get, id: "Register", remote: true, class: "btn btn-primary"
