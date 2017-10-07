@@ -46,8 +46,8 @@ div.wrapper-content
 
       = render "devise/shared/links"
 
-      button class="btn btn-primary", id="Login"
-      button class="btn btn-primary", id="Register"
+      button class="btn btn-primary" id="Login"
+      button class="btn btn-primary" id="Register"
       /= link_to "login", new_user_session_path, method: :get, id: "Login", remote: true, class: "btn btn-primary"
       /= link_to "register", new_user_registration_path, method: :get, id: "Register", remote: true, class: "btn btn-primary"
 
