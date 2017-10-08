@@ -9,8 +9,8 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    @user = User.find_by(email: params[:email])
-    @user.authenticate(params[:password])
+    @user = User.find_by(email: params[:user][:email])
+    @user.authenticate(params[:user][:password])
     redirect_to user_root_path
     super
   end
