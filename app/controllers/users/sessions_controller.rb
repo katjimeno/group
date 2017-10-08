@@ -9,6 +9,7 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
+    redirect_to authenticated_rooth_path
     super
   end
 
