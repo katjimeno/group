@@ -1,7 +1,7 @@
 <%= render "devise/shared/links" %>
-<%if user_signed_in? %>
+
   <p>
     <%= link_to "Home", "/" %>
     <%= link_to('Logout', destroy_session_path(resource_name), method: :delete) %>
   </p>
-<%end%>
+

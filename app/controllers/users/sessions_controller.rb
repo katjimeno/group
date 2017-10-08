@@ -9,7 +9,7 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    if user_signed_in?
+    if current_user
       return redirect_to(user_root_url)
     else
       return "else"
