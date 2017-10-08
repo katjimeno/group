@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 #   get 'sign_in', to: 'devise/sessions#new'
 # end
 
+  root 'home#index'
 
   # authenticated :user do
   devise_scope :user do
@@ -36,5 +37,4 @@ Rails.application.routes.draw do
 
   end
 
-  root 'home#index'
 end
