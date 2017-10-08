@@ -9,7 +9,7 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    redirect_to authenticated_root_path
+    redirect_to user_root_path
     super
   end
 
