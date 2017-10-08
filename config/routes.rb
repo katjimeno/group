@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: 'users/sessions' }
 
   authenticated :user do
-    root 'cohorts#index', as: :authenticated_root
+    root 'cohorts#index', as: :user_root
 
     resources :cohorts do
       resources :phases, only: [:new, :create, :index]
