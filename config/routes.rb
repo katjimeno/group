@@ -6,10 +6,8 @@ Rails.application.routes.draw do
 #   get 'sign_in', to: 'devise/sessions#new'
 # end
 
-
-  # authenticated :user do
-  devise_scope :user do
-    root :to => 'cohorts#index', as: :user_root_path
+  authenticated :user do
+    root 'cohorts#index', as: :authenticated_root
 
     resources :cohorts do
       resources :phases, only: [:new, :create, :index]
