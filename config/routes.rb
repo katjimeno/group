@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # authenticated :user do
   devise_scope :user do
-    root 'cohorts#index', as: :authenticated_root
+    root :to => 'cohorts#index', as: :user_root_path
 
     resources :cohorts do
       resources :phases, only: [:new, :create, :index]
